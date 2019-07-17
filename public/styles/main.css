@@ -1,0 +1,13 @@
+/* font-face {
+    font-family: 'Pokemon Solid';
+    src: url()
+} */
+
+ul {
+
+    display: inline-block;
+    width: 45%;
+    margin: 5% 25% 0 25%;
+    text-align: center;
+    list-style: none
+}

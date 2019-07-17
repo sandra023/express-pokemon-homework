@@ -2,8 +2,9 @@ const express = require('express');
 // const bodyParser= require('body-parser')
 // const methodOverride = require('method-override')
 const app = express();
+const pokemon = require('./models/pokemon')
 
-const Pokemon = require('./models/pokemon')
+app.use(express.static('public'));
 
 // app.use(bodyParser.urlencoded({extended: false}))
 // app.use(methodOverride('_method'))
@@ -14,10 +15,18 @@ const Pokemon = require('./models/pokemon')
 // })
 
 app.get('/pokemon', (req,res) => {
-    res.send('index.ejs', {
-       pokemon: Pokemon
+    res.render('index.ejs', {
+        pokemon: pokemon
     })
 })
+
+
+
+
+
+
+
+
 
 
 app.get('/', (req,res) => {
