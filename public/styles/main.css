@@ -3,8 +3,7 @@
     src: url()
 } */
 
-ul {
-
+body, ul {
     display: inline-block;
     width: 45%;
     margin: 5% 25% 0 25%;

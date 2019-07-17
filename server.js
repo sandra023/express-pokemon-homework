@@ -22,7 +22,11 @@ app.get('/pokemon', (req,res) => {
 
 
 
-
+app.get('/pokemon/:index', (req,res) => {
+    res.render('show.ejs', {
+        pokemon: pokemon[req.params.index]
+    })
+})
 
 
 
@@ -36,3 +40,5 @@ app.get('/', (req,res) => {
 app.listen(3000, () => {
     console.log("Welcome Trainers")
 })
+
+module.exports = app;
