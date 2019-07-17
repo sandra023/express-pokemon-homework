@@ -4,6 +4,7 @@
 } */
 
 body, ul {
+    font-family: 'Bangers', cursive;
     display: inline-block;
     width: 45%;
     margin: 5% 25% 0 25%;
@@ -12,3 +13,6 @@ body, ul {
     /* color: darkcyan */
 }
 
+ul {
+    font-size: 200%
+}
