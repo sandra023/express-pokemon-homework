@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" href="/styles/app.css">
+    </head>
+    <body>
+        <h1>Edit Pokemon Information</h1>
+        <!--  NOTE: action will be the route, method will be the HTTP verb-->
+        <form action="/pokemon/<%=index%>?_method=PUT" method="POST">
+            Name: <input type="text" name="name" value=<%=pokemon.name%> /><br/>
+            Image Source: <input type="text" name="img" value="<%=pokemon.img%>"><br/>
+            Background Color: <input type="text" name="color" value=<%=pokemon.color%> /><br/>
+
+            <%# Color: <input type="text" name="color" /><br/> %>
+            <input type="submit" name="" value="Submit Corrections"/>
+        </form>
+    </body>
+</html>

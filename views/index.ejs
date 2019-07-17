@@ -13,6 +13,9 @@
         <h1>Pokemon</h1>
         <%pokemon.forEach(function(pokemon, index){%>
         <li><a href="/pokemon/<%=index%>"><%=pokemon.name%></a></li>
+        <form method="POST" action='/pokemon/<%=index%>?_method=DELETE'>
+            <input type="submit" name="" value="DELETE"/>
+        </form>    
         <%})%>
     </ul>
 </body>

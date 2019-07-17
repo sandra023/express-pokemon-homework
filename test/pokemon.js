@@ -11,8 +11,8 @@ describe('RESTful pokemon routes', function(){
             .expect(200)
             .expect((response)=>{
                 const $ = cheerio.load(response.text);
-                $('.pokemon li:first-child').text().should.be.eq('Bulbasaur')
-                $('.pokemon li:last-child').text().should.be.eq('Wartortle');
+                $('.pokemon li:first-of-type').text().should.be.eq('Bulbasaur')
+                $('.pokemon li:last-of-type').text().should.be.eq('Wartortle');
             })
             .end(done);
     })
@@ -33,7 +33,7 @@ describe('RESTful pokemon routes', function(){
         .expect(200)
         .expect((response)=>{
             const $ = cheerio.load(response.text)
-            const firstHref = $('.pokemon li:first-child a').attr('href');
+            const firstHref = $('.pokemon li:first-of-type a').attr('href');
             firstHref.should.be.eq('/pokemon/0')
         })
         .end(done)
