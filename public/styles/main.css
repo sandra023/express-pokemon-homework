@@ -8,5 +8,7 @@ body, ul {
     width: 45%;
     margin: 5% 25% 0 25%;
     text-align: center;
-    list-style: none
+    list-style: none;
+    /* color: darkcyan */
 }
+
